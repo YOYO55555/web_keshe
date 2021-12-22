@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+		<script type="text/javascript" src="./bootstrap/dist/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="./css/history.css" type="text/css"/>
+	</head>
+	<body>
+		<div id="app">
+			<div id="container">
+				<div id="top">
+					<div id="top_time">
+						当前时间：{{nowTime}}
+					</div>
+					<div id="top_img">
+						
+					</div>
+					<div id="top_nav">
+						<ul class="nav nav-pills nav-justified">
+							<li><a href="login.html">登录</a></li>
+							<li><a href="index.html">首页</a></li>
+							<li><a href="culture.html">传统文化</a></li>
+							<li><a href="food.html">美食</a></li>
+							<li><a href="side.html">周边娱乐</a></li>
+							<li class="active"><a href="history.html">发展</a></li>
+							<li><a style="cursor: pointer;" @click="openComment()">点击评论</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="main">
+					<div id="main_content">
+						<div class="history_">
+							<h2>辉煌历史</h2>
+							<h3>一、近现代以前</h3>
+							<p>
+								梧州在历史上曾经是作为广西的政治经济文化中心，依托的是什么？
+								便捷的水通道。广西境内的珠江支流在梧州汇聚然后顺流直达广府核心的珠三角。
+								在近现代以前，水路优势是无可比拟的重大天然优势，
+								不然就无法解释为什么历代王朝都要修通与富庶地区的运河。
+								这一天然优势奠定了梧州作为古代广西曾经的政治经济文化中心的地位。
+							</p>
+							<div class="img">
+								<img src="./img/history.jpg" width="70%"/>
+							</div>
+							<h3>二、到了现代</h3>
+							<p>
+								到了现代，交通形式发生了重大转变，以高速、高铁、航空为代表，相当程度上削弱了梧州水运的优势，
+								其次，自从广西的经济中心从桂柳地区消散成碎片化后，
+								原先桂柳经济中心对梧州的辐射联动效应程明显的下降，
+								而梧州距离广东中心地区的珠三角，距离同样偏远。
+								反过来说，梧州作为一个河港枢纽，失去了资本聚集地，也失去了经济腹地，
+								有心向东却依然离珠三角万水前重，等于是两头不靠岸。
+							</p>
+						</div>
+						<div class="history_">
+							<h2>"十四五规划" 交通运输发展</h2>
+							<h3></h3>
+							<p>
+								
+							</p>
+							<h3>一、回顾"十三五规划成就"</h3>
+							<p>
+								"十三五"期间保持高投入、大建设，梧州市交通运输总里程
+								达到7612公里，建成环城高速、梧州至柳州等高速公路，梧州南站
+								每日开行列车130多躺，直达广州、深圳、香港、昆明等城市。
+								梧州港简称千吨级以上泊位33个，2020年完成水路货运量达到3687
+								万吨，西江机场相继开通许多运输航线。
+							</p>
+							<div class="img">
+								<img src="./img/history2.png" width="80%"/>
+							</div>
+							<h3>二、展望"十四五规划"</h3>
+							<p>
+								坚持以习近平新时代中国特色社会主义思想为指导，深入
+								贯彻党的十九大和十九届二中、三中、四中、五中、六中
+								全会精神，紧紧围绕 "建设新时代中国特色社会主义壮美广西"
+								 的总目标总要求。
+							</p>
+							<p>
+								围绕自治区党委服务梧州的新定位新要求，深入实施全面 "东融" 战略，
+								大力弘扬 "海纳百川，力争上游" 新时代梧州精神，紧口交通运输高质量发展
+								主题，以建设人民满意交通为目标，加快建设安全、便捷、搞笑、绿色、经济
+								的现代综合交通运输体系，为经济社会高质量发展提供强有力的支撑。
+							</p>
+							<h2>未来的发展</h2>
+							<div class="dev">
+								<div class="dev_top">
+									构建一个全国区域性交通枢纽
+								</div>
+								<div class="dev_content">
+									<p>
+										梧州市区域综合枢纽地位优势突出，"十四五"期间，
+										优化完善梧州市综合交通枢纽布局，推进水、公、铁、空建设，
+										实现货运便利，客运"零距离换乘"
+									</p>
+								</div>
+							</div>
+							<div class="dev">
+								<div class="dev_top">
+									打造一个 "东融——交通融" 的升级版
+								</div>
+								<div class="dev_content">
+									<p>
+										在"十四五"期间，梧州重点打造"东融"战略升级版，在既有"东融"设施
+										的基础上，着重构建能力充分、快速高效的公路、铁路、水路运输大通道，
+										全面提升与粤港澳大湾区交通互联互通水平。
+									</p>
+								</div>
+							</div>
+							<div class="dev">
+								<div class="dev_top">
+									编织一张 "融合一体" 的综合立体交通网
+								</div>
+								<div class="dev_content">
+									<p>
+										优化完善综合网络布局，加强水、公、铁、空之间通道衔接，加快
+										哦在那个和交通枢纽的集疏运体系建设，各种运输方式充分发挥又是、相互卸载，综合运输
+										效率实现提升。
+									</p>
+									<p>
+										推进机场的建设，改善航空出行条件，提升稽查处那个保障能力，推动建设梧州
+										通用航空示范区，拓展开通更多至粤港澳核心区航班，带动旅游消费，促进商业繁荣。
+										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="history_">
+							<h3>三、发展状况</h3>
+							<p>
+								珠江—西江经济带上升为国家战略，自治区人民政府提出打造亿吨“黄金水道”战略部署，实现江海联动，
+								成为广西内河连通粤港澳的水上运输大动脉。梧州市处于西江黄金水道核心经济带上，
+								受益于珠江—西江经济带的发展。“十四五”时期，梧州将着力推进贵港至梧州3000吨级航道工程、
+								桂江航道工程马江至莲花大桥段、桂江旺村水利枢纽至桂江与浔江交汇处2000吨级等航道工程加快建设，
+								开展绣江白马至河口段航道整治工程的前期研究，提升“一干两支”航道网络通航能力；
+								加快完善梧州市中心港区、藤县港区、苍梧港区的建设布局，加快建成大型化、专业化、
+								智能化的码头作业区，着力打造珠江—西江经济带交通升级版，强力支撑国家战略深入实施，
+								支持珠江—西江经济带高质量发展。
+							</p>
+							<p>
+								
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="comment">
+					<div id="comment_top">
+						评论
+					</div>
+					<div id="comment_content">
+						<textarea placeholder="此区域输入评论" id="textarea"></textarea>
+					</div>
+					<div id="comment_footer">
+						<input type="button" style="width:100px; height: 40px;
+						border: 1px solid #d2d2d2;
+						color: #000000;
+						border-radius: 2px;
+						border: none;"
+						value="取消" id="cancle" @click="cancle()"/>
+						<input type="button" style="width:100px; height: 40px;
+						background-color: #009688;
+						color: #FFFFFF;
+						border-radius: 2px;
+						border: none;"
+						value="提交评论" id="commit" @click="commit()"/>
+					</div>
+				</div>
+				
+				
+				<div id="footer">
+					2021-2022-1学期&nbsp;&nbsp;
+					Web前端开发技术课程设计&nbsp;&nbsp;
+					龙斌&nbsp;&nbsp;
+					201909601117&nbsp;&nbsp;
+					软件Q193班
+				</div>
+			</div>
+		</div>
+		<script src="./js/history.js"></script>
+	</body>
+</html>

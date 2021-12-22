@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+		<script type="text/javascript" src="./bootstrap/dist/js/bootstrap.min.js"></script>
+		
+		<link href="./css/register.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div id="app">
+			<div id="main">
+				<div id="content">
+					<div id="top">
+						注册
+					</div>
+					<div id="middle">
+						<div class="input-group">
+						    <span class="input-group-addon">账号</span>
+						    <input type="text" class="form-control" placeholder="字母&数字 不少于4位" @blur="valusername()" id="username">
+						</div>
+						<div class="tip">{{username}}</div>
+						<div class="input-group">
+						    <span class="input-group-addon">密码</span>
+						    <input type="password" class="form-control" placeholder="字母&数字 不少于4位" @blur="valpassword()" id="password">
+						</div>
+						<div class="tip">{{password}}</div>
+						<div class="input-group">
+						    <span class="input-group-addon">邮箱</span>
+						    <input type="text" class="form-control" placeholder="只支持QQ邮箱" @blur="valEmail()" id="email">
+						</div>
+						<div class="tip">{{email}}</div>
+						<div id="middle_btn">
+							<div id="btnTwo">
+								<button type="button" class="btn btn-default" style="outline: none; width:100px;" @click="Reset()">
+									重置
+								</button>
+							</div>
+							<div id="btnTwo">
+								<button type="button" class="btn btn-info" style="outline: none; width:100px;" @click="Register()">
+									注册
+								</button>
+							</div>
+						</div>
+					</div>
+					<div id="footer">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="./js/register.js"></script>
+	</body>
+</html>

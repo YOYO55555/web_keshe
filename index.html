@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- JQuery -->
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Vue -->
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+		<script type="text/javascript" src="./bootstrap/dist/js/bootstrap.min.js"></script>
+	
+		
+		<link rel="stylesheet" href="./css/index.css" type="text/css"/>
+	</head>
+	<body>
+		<div id="app">
+			<div id="container">
+				<div id="top">
+					<div id="top_time">
+						当前时间：{{nowTime}}
+					</div>
+					<div id="top_img">
+						
+					</div>
+					<div id="top_nav">
+						<ul class="nav nav-pills nav-justified">
+							<li><a href="login.html">登录</a></li>
+							<li class="active"><a href="index.html">首页</a></li>
+							<li><a href="culture.html">传统文化</a></li>
+							<li><a href="food.html">美食</a></li>
+							<li><a href="side.html">周边娱乐</a></li>
+							<li><a href="history.html">发展</a></li>
+							<li><a style="cursor: pointer;" @click="openComment()">点击评论</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="main">
+					<h2>广西梧州</h2>
+					<p>梧州，广西下辖地级市。
+					梧州位于广西东部，扼浔江、桂江、西江总汇，自古以来便被称作“三江总汇。
+					   是广西东大门，是中国西部大开发十二个省中最靠近粤港澳的城市，
+					 东邻封开县、郁南县，东南与罗定接壤，南接容县、信宜，西连平南县，北通昭平县、荔浦市  ，
+					 东北与贺州接壤，西北与金秀县毗邻。
+					 </p>
+					 <h3>
+						 百年奋斗路——红色火种
+					 </h3>
+					 <p>
+						 广西梧州位处两广咽喉，三江交汇，素得革命风气之先。辛亥革命爆发，
+						 梧州在两广地区率先响应，宣布独立；大革命时期，广西最早的红色革命火种在梧州播撒，并溯江而上传遍八桂大地。
+					 </p>
+					 <p>
+						 1926年，中共梧州地委就领导群众开展一系列革命斗争，推动了梧州和广西红色革命的蓬勃发展，
+						 梧州也创造了广西第一个党支部、第一个地委、第一个农村党支部等广西党史的18个第一。
+						 曾担任中共梧州市委党史研究室主任的杜士勇说，1927年	四·一二反革命政变后，
+						 中共在梧州的党组织遭受严重破坏，中共梧州地委改为中共广西地委，辖广西各地的党组织。
+					 </p>
+					 <p>
+						 1928年1月，广西地委改组为中共广西特别行动委员会（即“广西特委”），以适应新的革命形势需要。同年6月，中共广西特委书记朱锡昂根据上级指示来到梧州，租住在维新里东一巷4号的民居，特委机关也设在这里。
+					 </p>
+					 <div id="main_img" @mouseover="large()" @mouseout="small()">
+					 	<img src="img/wz.jpg" width="100%"/>
+					 </div>
+					 <h3>文化发源地</h3>
+					 <p>梧州是古苍梧郡、古广信县所在地， 
+					 岭南文化发源地之一。 
+					有“绿城水都”  、
+					 “百年商埠”   、
+					 “世界人工宝石之都”   
+					 之美称。是国家森林城市、
+					 国家园林城市  、
+					 全国双拥模范城市 、
+					 中国优秀旅游城市 。
+					 汉高后五年（公元前183年），
+					 赵光在此地建苍梧王城，这是梧州建城之始。 
+					 至今已有2200多年建城史 
+					 ，先后诞生了陈钦、士燮、袁崇焕、李济深、梁羽生、高伯龙等杰出人物。
+					 </p>
+					 <p>
+						 梧州是六堡茶、龟苓膏的原产地。
+						 梧州的代表特产有
+						 <a href="food.html#lbc">六堡茶</a>、
+						 <a href="food.html#glg">龟苓膏</a>、
+						 <a href="food.html#zbj">纸包鸡</a>、
+						 <a href="food.html#bqdj">冰泉豆浆</a>、
+						 <a href="food.html#gdj">岑溪古典鸡</a>、
+						 上汤河粉、梧州腊肠、岑溪红。
+						 2020年，梧州市生产总值（GDP）1081.34亿元。
+					 </p>
+					 <div id="main_table">
+					 	<table width="100%" border="1">
+							 <tr>
+								 <td>中文名</td>
+								 <td>梧州</td>
+							 </tr>
+							 <tr>
+								<td>别名</td>
+								<td>绿城水都</td>
+							 </tr>
+							 <tr>
+								<td>所属地区</td>
+								<td>广西壮族自治区</td>
+							 </tr>
+							 <tr>
+								<td>下辖地区</td>
+								<td>长洲区、万秀区、龙圩区、岑溪市、苍梧县、藤县、蒙山县</td>
+							 </tr>
+							 <tr>
+								<td>气候</td>
+								<td>亚热带季风气候</td>
+							 </tr>
+							 <tr>
+								<td>著名景点</td>
+								<td>骑楼城、龙母庙、苍海湖旅游区、石表山风景区、李济深故居</td>
+							 </tr>
+					 	</table>
+					 </div>
+					 <p>
+						 梧州市地处东经110°18′～111°40′，
+						 北纬22°37′～24°18′之间，
+						 北回归线从市区经过，位于广西壮族自治区东部，
+						 是广西东大门，东邻广东省肇庆市封开县、云浮市郁南县，
+						 东南与广东省云浮市的罗定市接壤，南接玉林市容县、广东省茂名市信宜市，
+						 西连贵港市平南县，北通贺州市昭平县、桂林市荔浦市，东北与贺州市八步区接壤，
+						 西北与来宾市金秀瑶族自治县毗邻。全境东西距115公里，南北长196公里，总面积12588平方公里，
+						 其中，市区面积占1097.17平方公里。
+					 </p>
+					 <div id="img_compainer">
+					 	<div class="img_compainer_1">
+					 		<div class="img_compainer_1_img">
+					 			<a href="https://github.com/YOYO55555/web_keshe" target="_blank">
+									<img src="./img/github.png" width="70"/>
+								</a>
+					 		</div>
+							<div class="img_compainer_1_p">
+								<a href="https://github.com/YOYO55555/web_keshe" target="_blank">Github</a>
+							</div>
+					 	</div>
+						<div class="img_compainer_1">
+							<div class="img_compainer_1_img">
+								<a href="https://gitee.com/YOYO55555/web_keshe" target="_blank">
+									<img src="./img/gitee.png" width="70"/>
+								</a>
+							</div>
+							<div class="img_compainer_1_p">
+								<a href="https://gitee.com/YOYO55555/web_keshe" target="_blank">Gitee</a>
+							</div>
+						</div>
+					 </div>
+				</div>
+				<div id="comment">
+					<div id="comment_top">
+						评论
+					</div>
+					<div id="comment_content">
+						<textarea placeholder="此区域输入评论" id="textarea"></textarea>
+					</div>
+					<div id="comment_footer">
+						<input type="button" style="width:100px; height: 40px;
+						border: 1px solid #d2d2d2;
+						color: #000000;
+						border-radius: 2px;
+						border: none;"
+						value="取消" id="cancle" @click="cancle()"/>
+						<input type="button" style="width:100px; height: 40px;
+						background-color: #009688;
+						color: #FFFFFF;
+						border-radius: 2px;
+						border: none;"
+						value="提交评论" id="commit" @click="commit()"/>
+					</div>
+				</div>
+				
+				<div class="comment_area">
+					<div class="comment_area_top">
+						评论
+					</div>
+					<div class="comment_area_content" v-for="item in comment">
+						{{item}}
+					</div>
+				</div>
+				
+				<div id="footer">
+					2021-2022-1学期&nbsp;&nbsp;
+					Web前端开发技术课程设计&nbsp;&nbsp;
+					龙斌&nbsp;&nbsp;
+					201909601117&nbsp;&nbsp;
+					软件Q193班
+				</div>
+			</div>
+		</div>
+		<script src="./js/index.js"></script>
+	</body>
+</html>

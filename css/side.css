@@ -1,0 +1,138 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#top_img{
+	background-image: url(../img/wz-bg.jpg);
+	background-repeat: no-repeat;
+	height: 200px;
+}
+#top_time{
+	position: fixed;
+	z-index: 100;
+	background-color: white;
+	width: 100%;
+	opacity: 0.9;
+	font-weight: 550;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+}
+#top_nav{
+	width: 97%;
+	margin: 0 auto;
+}
+#top_time{
+	position: fixed;
+	z-index: 100;
+	background-color: white;
+	width: 100%;
+	opacity: 0.9;
+	font-weight: 550;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+}
+#main{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+.scenery{
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	margin-top: 50px;
+}
+.scenery_top{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+	padding: 15px;
+	font-size: 17px;
+}
+.scenery_img{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.scenery_img_img{
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+.scenery_img img{
+	margin-left: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.scenery_img img:hover{
+	transform: scale(1.05);
+	transition: 0.2s;
+}
+.scenery_content{
+	margin: 0 auto;
+	width: 90%;
+	padding: 15px;
+	text-indent: 4rem;
+	font-size: 17px;
+	line-height: 32px;
+	font-family: "宋体";
+}
+#comment{
+	position: fixed;
+	z-index: 9999;
+	width: 400px;
+	/* height: 200px; */
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	top: 23%;
+	left: 50%;
+	margin-left: -200px;
+	background-color: #FFFFFF;
+	border-radius: 2px;
+	display: none;
+}
+#comment_top{
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 19px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+#comment_content{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+textarea{
+	padding: 15px;
+	width: 80%;
+	height: 200px;
+	/* 取消文本域缩放 */
+	resize: none;
+}
+#comment_footer{
+	border-top: 1px solid rgba(0, 0, 0, 0.24);
+	height: 50px;
+	/* line-height: 50px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#comment_footer input{
+	margin-left: 10px;
+}
+#comment_footer input:hover{
+	transform: scale(1.01);
+	transition: 0.2s;
+}
+
+#footer{
+	height: 60px;
+	width: 100%;
+	margin-top: 100px;
+	background: linear-gradient(to top,#FFFFFF,rgba(204,204,204,0.4));
+	line-height: 60px;
+	text-align: center;
+	font-size: 17px;
+	/* color: blue; */
+}

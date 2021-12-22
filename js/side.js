@@ -1,0 +1,101 @@
+$(function(){
+	//创建Vue实例
+	var vm = new Vue({
+		el:"#app",
+		//数据。html通过vue绑定可将数据展示在页面上
+		data:{
+			nowTime:'',
+			scenery:[
+				{
+					scenery_title:"1、骑楼城-龙母庙景区",
+					scenery_img:["./img/ql1.jpg","./img/lmm.jpg"],
+					scenery_content:"骑楼城梧州素为广西水上门户，上个世纪20年代后，,\
+					原来的坊式房已不能满足日益繁荣的商业发展的需要，骑楼逐渐取而代之。梧州地处岭南，\
+					北回归线经过其间，旧时为了结合南方潮湿多雨及多洪易涝的气候特点，梧州建筑多采用骑楼形式，\
+					临街楼层可作商铺，楼上可住人。骑楼多为三四层，临街店铺二楼以上部分凸出来，二楼罩着的空间成为人行道\
+					，远远看去，像“骑”在人行道上一样，故名“骑楼”。\
+					骑楼的背后是内街，民宅大门一般开向内街内巷，内街成为居民交往的“公共大厅”，\
+					充满浓郁的人情味。这种有层次的沿街檐廊复合空间，大大适应了市民日常生活的丰富性和空间使用功能的多样性。"
+				},
+				{
+					scenery_title:"2、梧州中山公园",
+					scenery_img:["./img/zsgy.jpg","./img/zsgy2.jpg"],
+					scenery_content:"梧州中山公园原为北山，古称茶山，位于市中心。,\
+					民国14年（1925年），辟为公园，名曰中山公园，为梧州最早建成的公园。\
+					全国最早落成的中山纪念堂座落在北山顶，为自治区文物保护单位，是1925年3月由李济深倡议筹建。\
+					纪念堂内着重介绍孙中山先生在1921年底到1922年初三次莅临梧州，指导梧州人民建设家乡，治理西江航运的事迹。\
+					纪念堂规模宏伟，分前后座，前座中部为四层塔式圆顶建筑，东西两翼为二层楼房，为陈列室，后座是千人会堂。\
+					纪念堂正面是层层台阶，自山脚至大门前共340余级；门前是广坪，中筑荷池，环列石凳，荫以悟榕，景致迷人。"
+				},
+				{
+					scenery_title:"3、白云山景区",
+					scenery_img:["./img/bys.jpg","./img/bys2.jpg"],
+					scenery_content:"梧州白云山位于梧州市区东北方。白云山遥连五岭，总纳三江，至梧州突而挺起，蜿蜒盘桓，气势磅礴。,\
+					站在山顶俯瞰远眺，全城风光，远方景物尽收眼底。山上树木参天，晨雾迷漫。在雨后初晴之际，素洁云雾，缭绕飘忽。\
+					高耸的白云山就象戴上白面纱，披上白围巾的绿衣少女。唐代诗人孟浩然有诗云：苍梧白云远，烟水洞庭深。\
+					清代诗人李世瑞作诗说：晓露乍薄初日上，晚烟如幂夕阳低。白云山为梧州八景之一，称作云岭晴岚。\
+					白云山于1981年建成公园，1988年被定为第一批自治区级风景名胜区。\
+					山上先后建起了云峰亭、松云楼、双清亭、风筝台、半山亭、观秋台、\
+					松涛虎啸雕塑等设施，并在山下龙泉冲修建龙吟亭、观瀑阁、探幽桥、二龙戏珠浮雕等。\
+					登上顶端云峰亭，大有一览众山小的感觉。"
+				},
+				{
+					scenery_title:"4、石表山",
+					scenery_img:["./img/sbs.jpg","./img/sbs2.jpg"],
+					scenery_content:"石表山休闲旅游风景区坐落在藤县象棋道家村，距梧州市区90公里,距藤县县城约38公里，,\
+					容藤二级公路从景区边经过，交通十分便利，景区总面积约16平方公里。按国家AAAA级景区规划为集休闲、\
+					度假、揽胜、礼佛于一体综合性山水诗画景区。景区主要包括思罗河漂流景区、石表山寨景区、道家沙滩公园三大部份。\
+					明澈的河水、洁净的沙滩、深幽的峡谷、青葱的竹林、神秘的山寨、鬼斧神工的丹霞景观、\
+					古朴天成的村落，融合了自然的钟秀、文化的气韵和历史的沧桑，使得整个景区独具特色、魅力无穷。"
+				}
+			]
+		},
+		methods:{
+			large(){
+				$("#main_img").css("transform","scale(1.1)")
+				$("#main_img").css("transition","0.2s")
+			},
+			small(){
+				$("#main_img").css("transform","scale(1.0)")
+			},
+			time(){
+				var time = new Date()
+				this.nowTime=time.getFullYear()+"年"+(time.getMonth()+1)+"月"+time.getDate()+"日"
+				+" "+time.getHours()+"时"+time.getMinutes()+"分"+time.getSeconds()+"秒"
+			},
+			//打开评论区
+			openComment(){
+				$("#comment").css("display","block")
+			},
+			cancle(){
+				$("#textarea").val("")
+				$("#comment").css("display","none")
+			},
+			commit(){
+				var text=$("#textarea").val()
+				// comm=JSON.parse("["+localStorage.getItem("comment")+"]")
+				comm=JSON.parse(localStorage.getItem("comment"))
+				comm.push(text)
+				localStorage.setItem("comment",JSON.stringify(comm))
+				this.comment=JSON.parse(localStorage.getItem("comment"))
+				$("#comment").css("display","none")
+				alert("评论提交成功！内容可在首页底部看到")
+			}
+		},
+		
+		//钩子函数，初始化vue并替换模板后首先执行
+		mounted(){
+			var comm=new Array()
+			/**
+			 *  每次加载页面时判断 locaStorage 是否存在comment，不存在则初始化，存在则不需要执行此操作
+			 * 	用于 持久化 数据
+			 */
+			if(JSON.parse(localStorage.getItem("comment"))===null){
+				localStorage.setItem("comment",JSON.stringify(comm))
+			}else{
+				this.comment=JSON.parse(localStorage.getItem("comment"))
+			}
+		}
+	});
+	setInterval(vm.time,1000)
+})

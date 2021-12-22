@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+		<script type="text/javascript" src="./bootstrap/dist/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="./css/food.css" type="text/css"/>
+	</head>
+	<body>
+		<div id="app">
+			<div id="container">
+				<div id="top">
+					<div id="top_time">
+						当前时间：{{nowTime}}
+					</div>
+					<div id="top_img">
+						
+					</div>
+					<div id="top_nav">
+						<ul class="nav nav-pills nav-justified">
+							<li><a href="login.html">登录</a></li>
+							<li><a href="index.html">首页</a></li>
+							<li><a href="culture.html">传统文化</a></li>
+							<li class="active"><a href="#">美食</a></li>
+							<li><a href="side.html">周边娱乐</a></li>
+							<li><a href="history.html">发展</a></li>
+							<li><a style="cursor: pointer;" @click="openComment()">点击评论</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="main">
+					<div id="left_nav">
+						<ul><!-- 六堡茶、龟苓膏、纸包鸡、冰泉豆浆、岑溪古典鸡、上汤河粉、梧州腊肠、岑溪红 -->
+							<li id="li_top" @click="open()">
+								<div id="">
+									美食
+								</div>
+								<div id="ul_top_img">
+									<img src="./img/down.png" width="30" height="30"/>
+								</div>
+								<!-- <div id="ul_top">
+									<div id="">
+										<h3>美食</h3>
+									</div>
+									<div id="ul_top_img">
+										<img src="./img/down.png" width="30" height="30"/>
+									</div>
+								</div> -->
+							</li>
+							<div id="ul_main">
+								<li class="ul_main_li">
+									<a href="#lbc" style="text-decoration: none;">六堡茶</a>
+								</li>
+								<li class="ul_main_li">
+									<a href="#glg" style="text-decoration: none;">龟苓膏</a>
+								</li>
+								<li class="ul_main_li">
+									<a href="#zbj" style="text-decoration: none;">纸包鸡</a>
+								</li>
+								<li class="ul_main_li">
+									<a href="#bqdj" style="text-decoration: none;">冰泉豆浆</a>
+								</li>
+								<li class="ul_main_li">
+									<a href="#gdj" style="text-decoration: none;">岑溪古典鸡</a>
+								</li>
+								<!-- <li class="ul_main_li">
+									<a href="#" style="text-decoration: none;">上汤河粉</a>
+								</li>
+								<li class="ul_main_li">
+									<a href="#" style="text-decoration: none;">梧州腊肠</a>
+								</li>
+								<li class="ul_main_li">
+									<a href="#" style="text-decoration: none;">岑溪红</a>
+								</li> -->
+							</div>
+						</ul>
+					</div>
+					
+					<div id="main_content">
+						<div class="foods">
+							<h2><a name="lbc" style="text-decoration: none;color: #000000;">六堡茶</a></h2>
+							<p>
+								六堡茶，广西壮族自治区梧州市特产，中国国家地理标志产品。
+								六堡茶属黑茶类，选用苍梧县群体种、广西大中叶种及其分离、选育的品种、
+								品系茶树的鲜叶为原料，按特定的工艺进行加工，具有独特品质特征的黑茶。
+								喝过六堡茶的人都会对它的“中国红”情有独钟，六堡茶业界认为，
+								必须以“中国红”的文化韵味和民族特色为准则，使六堡茶走上复兴之路。
+							</p>
+							<h3>十四五规划大力发展六堡茶</h3>
+							<p>
+								自治区第十二次党代会明确提出要加快发展茶产业等特色产业集群，
+								市第十四次党代会提出我市“十四五”期间要大力发展六堡茶产业，
+								力争六堡茶综合产值占据广西茶产业“半壁江山”的奋斗目标。
+								今年以来，六堡茶市场购销两旺，为梧州市做大做强六堡茶产业吹来了东风。
+							</p>
+							<div class="img">
+								<img src="./img/lbc.jpg" />
+							</div>
+							<p>
+								进一步系统研究和细化完善推动六堡茶产业高质量发展有关政策文件，
+								将自治区提出的“前端聚焦、中间协同、后端转化”要求落实到六堡茶产业发展中，
+								围绕“茶苗、茶园、茶企、茶师、茶市、茶城”六大关键环节，
+								聚焦当前急需解决的主要问题进行认真系统思考，做好整体科学谋划，明确我市六堡茶产业高质量发展三年行动计划的指导思想、发展目标、重点任务、保障措施等内容，理清我市支持六堡茶产业高质量发展的思路和措施，确保政策文件有针对性、指导性和可操作性。
+							</p>
+						</div>
+						<div class="foods">
+							<h2><a name="glg" style="text-decoration: none; color: #000000;">龟苓膏</a></h2>
+							<p>
+								要以名贵的鹰嘴龟和土茯苓为原料，再配生地等药物精制而成。其性温和，不凉不燥，具有清热去湿，
+								旺血生肌，止瘙痒，去暗疮，润肠通便，滋阴补肾，养颜提神等功效，老少皆宜，因而倍受人们喜爱，
+								并畅销中外。
+							</p>
+							<div class="img">
+								<img src="./img/glg.jpg" width="60%"/>
+							</div>
+							<h3>龟苓膏配制技艺入选国家级非遗名录</h3>
+							<p>
+								2021年6月10日，国务院公布第五批国家级非物质文化遗产代表性项目名录，
+								梧州市龟苓膏配制技艺入选传统技艺类。
+								截至目前，梧州市国家级非物质文化遗产代表性项目共有三项。
+							</p>
+							<p>
+								龟苓膏配制技艺源于秦末汉初，制作出来的龟苓膏最初为宫中御品，
+								现在是市民用以清热解毒的“药食同源”食物。龟苓膏配制技艺是将自养龟作为原材料，
+								按照一定比例，加入茯苓、生地、凉粉草、罗汉果、灵芝、田七、金银花、菊花等多种中草药，
+								使用传统风选机、春碓、研钵、铡药刀、过滤装置、蒸煮炉等工具，
+								经20余道工序加工制成龟苓膏的一	种传统技艺。
+							</p>
+							<h3>龟苓膏的功用</h3>
+							<div class="img">
+								<img src="./img/glg2.jpg" width="60%"/>
+							</div>
+							<p>
+								龟苓膏滋阴补肾、润燥护肤、消除暗疮、调理脏腑、清热解毒、
+								防止肤质老化及便秘，能促进新陈谢，提升人体免疫力，是现代人不可或缺之养生圣品。
+								龟苓膏的研究报告中指出；龟板含有各种氨基酸，其中七种为人体不能自制但必须的氨基酸，
+								这些必需氨基酸占总氨基酸百分比相当高，约百分之二十。
+							</p>
+							<p>
+								龟苓膏可以清热祛湿，旺血生津，祛瘙痒，祛暗疮，润肠通便，滋阴补肾，养颜提神,
+								可以起到滋阴润燥，清热去火的效果，对于多种口腔溃疡，口咽燥甘都有显著的疗效。
+							</p>
+						</div>
+						<div class="foods">
+							<h2><a name="zbj" style="color: #000000; text-decoration: none;">纸包鸡</a></h2>
+							<h3>简单介绍</h3>
+							<p>
+								纸包鸡在制作技艺上，为了追求口味的正宗与地道，精选本土农家散养三黄鸡为原料，
+								切件后，配以老抽酱油、姜汁、八角、茴香、陈皮、草果、红谷米、古月粉等调味料及葱白粒腌制，
+								缀以少量白酒，以玉扣纸逐件包裹，再以花生油入锅浸炸而成。独创的隔纸浸炸烹饪法，
+								锁住了鸡肉及调味料原有的味道，所以能保持鸡肉的鲜嫩甘滑、醇厚不腻，色泽金黄、气味芳香。
+							</p>
+							<div class="img">
+								<img src="./img/zbj1.jpg" width="60%"/>
+							</div>
+							<h3>文化定位</h3>
+							<p>
+								中国当代著名国学家、文化学者肖健为纸包鸡作文化定位，权威认定，纸包鸡是广式卤味的代表作，
+								堪称传统节庆的第一道菜！俗语有云“无鸡不成宴”，在中国，大凡节庆、喜庆筵席，
+								以鸡肉作为主要菜肴是不可或缺的。
+							</p>
+							<p>
+								2012年，非物质文化遗产传承人林艳光创立新粤西楼，永保纸包鸡制作技艺不变。2016年，
+								“纸包鸡制作技艺”项目入选广西壮族自治区非物质文化遗产名录。
+							</p>
+							<h3>丰富的文化内涵、鲜明的文化寓意</h3>
+							<p>
+								在中国，大凡节庆、喜庆筵席，以鸡肉作为主要菜肴是不可或缺的。
+								随着时代的发展，纸包鸡更打破了以往美食范畴中“食在梧州”必须“来梧州食”的传播地域局限，
+								发展成为美食中的“广西手信”，充当了梧州本土美食文化产业发展引领者的角色，
+								对“梧州手信文化”的发展起到重要的示范、带动、提升作用！纸包鸡进入“酱烤时代”，
+								制作技艺和风味系列食品的创新，使得纸包鸡的文化内涵得到了丰富、文化外延得到了拓展、
+								品牌价值得到了提升。
+							</p>
+						</div>
+						<div class="foods">
+							<h2><a name="bqdj" style="text-decoration: none; color: #000000;">冰泉豆浆</a></h2>
+							<h3>梧州特色</h3>
+							<p>
+								冰泉豆浆斐声遐迩、得天独厚的是“冰井泉香”的井水。“冰井泉香”自唐朝已出名，
+								《梧州府志》记载：“梧州城东有井出冰泉，井水甘凉清冽。”梧州市冰泉豆浆馆坐落在白云山脚的冰泉冲，
+								已有60多年经营历史，冰泉豆浆以它“香、滑、浓”独具风味，驰名中外。
+							</p>
+
+							<p>
+								冰泉豆浆以优质黄豆，利用冰井泉水精工制作，保持黄豆的原色，是一种内含植物蛋白质，
+								营养极其丰富的饮品。冰泉豆浆凉冻后，面上凝成一层薄豆皮，滴在桌上成珠，聚而不散，谓之“滴珠豆浆”。
+							</p>
+							<h3>制作</h3>
+							<p>
+								冰泉滴珠豆浆制作工艺十分讲究，每一个步骤都有很严格的要求。首先要选优质的黄豆，
+								然后，把黄豆浸泡后打磨。其次，就是过滤和煮。
+								冰泉滴珠豆浆的秘密就在对打磨后的豆浆进行过滤和煮的工序上面。别看过滤豆浆这么简单，
+								其实，里面隐藏着很多学问。如果过滤不够，煮出的豆浆稍微放久一点时间，就会分层。
+								冰泉滴珠豆浆就不存在这种情况。
+							</p>
+							<div class="img">
+								<img src="./img/bqdj.jpg" width="60%"/>
+							</div>
+						</div>
+						<div class="foods">
+							<h2><a name="gdj" style="text-decoration: none; color: #000000;">岑溪古典鸡</a></h2>
+							<h3>简介</h3>
+							<p>
+								溪古典鸡，广西壮族自治区岑溪市特产，中国国家地理标志产品。
+								岑溪古典鸡是广西的历史名鸡，是广西唯一没有引进任何外来血缘的优质地方土鸡，具有体型小巧、外貌华丽、爱啄好动、肉质细嫩、味鲜而醇香、皮薄骨细、皮下脂肪适度、鸡肉味特别浓郁等特点。
+								2016年11月04日，原国家质检总局批准对“岑溪古典鸡”实施地理标志产品保护。
+							</p>
+							<h3>产品特点</h3>
+							<p>
+								岑溪古典鸡是广西岑溪的原生三黄鸡种，用传统的方法轮放到山林中饲养，
+								因此得“古典鸡”之名，古典鸡的外貌特征：禾虾头、柚子身、铁线脚；
+								古典鸡的肉质特征：肉嫩味鲜、骨细香软、皮薄油少、百食不腻。
+								让鸡在大自然的状态中生存，顺乎其自然的风味，这就是古典鸡的本色、朴素、自然的理想。
+								岑溪古典鸡在肉质上有“广西土鸡赛天下，岑溪三黄赢广西”之美誉。
+							</p>
+							<h3>产地环境</h3>
+							<p>
+								岑溪属典型亚热带季风气候区，气候温和、日照充足、雨量充沛，年平均气温21.4℃，年平均降水量1450毫米。
+								年日照时数为2004.7小时。
+								岑溪古典鸡因生长在独特的地理环境、气候条件、土壤环境中，并用丰足的绿色无公害饲料及传统方法饲养，
+								形成独特的鸡肉味道。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="comment">
+					<div id="comment_top">
+						评论
+					</div>
+					<div id="comment_content">
+						<textarea placeholder="此区域输入评论" id="textarea"></textarea>
+					</div>
+					<div id="comment_footer">
+						<input type="button" style="width:100px; height: 40px;
+						border: 1px solid #d2d2d2;
+						color: #000000;
+						border-radius: 2px;
+						border: none;"
+						value="取消" id="cancle" @click="cancle()"/>
+						<input type="button" style="width:100px; height: 40px;
+						background-color: #009688;
+						color: #FFFFFF;
+						border-radius: 2px;
+						border: none;"
+						value="提交评论" id="commit" @click="commit()"/>
+					</div>
+				</div>
+				
+				
+				<div id="footer">
+					2021-2022-1学期&nbsp;&nbsp;
+					Web前端开发技术课程设计&nbsp;&nbsp;
+					龙斌&nbsp;&nbsp;
+					201909601117&nbsp;&nbsp;
+					软件Q193班
+				</div>
+			</div>
+		</div>
+		<script src="./js/food.js"></script>
+	</body>
+</html>
